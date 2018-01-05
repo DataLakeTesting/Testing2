@@ -1,0 +1,78 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+class Student {
+
+    String name;
+    int roll_nmber;
+    int marks;
+    String address;
+    public Student(String name,int roll_nmbr,int marks,String address){
+        this.name =name;
+        this.roll_nmber = roll_nmbr;
+        this.marks = marks;
+       
+        this.address = address;
+    
+}
+    public static void main(String[] args) {
+         ArrayList<Student> myArrayList=new ArrayList<Student>();
+        Student student1 = new Student("abx",32,200,"kolkata");
+        myArrayList.add(student1);
+        Student student2 = new Student("cdy",23,300,"Bihar");
+        myArrayList.add(student2);
+      department d1 = new department(001,"xyz");
+      department d2 = new department(002,"abc");
+      System.out.println("the department name:" +d1.d_name);
+     for (int i = 0; i <myArrayList.size(); i++) {   
+       //  System.out.println("Name:" + myArrayList.get(i));
+
+    System.out.println("Name:" + myArrayList.get(i).name);
+   System.out.println("Roll No:" + myArrayList.get(i).roll_nmber);
+    System.out.println("marks:" + myArrayList.get(i).marks);
+   System.out.println("Address:" +myArrayList.get(i).address);
+
+            
+            }
+        ArrayList<Student> myArrayList1=new ArrayList<Student>();
+         Student student3 = new Student("shilpi",32,200,"kolkata");
+         myArrayList1.add(student3);
+         Student student4 = new Student("prwithi",23,300,"Bihar");
+        myArrayList1.add(student4);
+         System.out.println("the department name:" +d2.d_name);
+         for (int i = 0; i <myArrayList1.size(); i++) {   
+
+
+    System.out.println("Name:" + myArrayList1.get(i).name);
+    System.out.println("Roll No:" + myArrayList1.get(i).roll_nmber);
+    System.out.println("marks:" + myArrayList1.get(i).marks);
+    System.out.println("Address:" +myArrayList1.get(i).address);
+
+            
+            }
+        
+         
+        
+    }
+}
+    
+   
+   class department
+   {
+       int d_id;
+       String d_name;
+       public department(int d_id,String d_name)
+       {
+           this.d_id = d_id;
+           this.d_name = d_name;
+       }
+           
+         // Scanner sc = new Scanner(System.in); 
+         // System.out.println("enter the department");
+         // String dname = sc.nextLine();
+       
+   }
+    
